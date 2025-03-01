@@ -1,4 +1,4 @@
-- name: Check Go version
+ name: Check Go version
   run: |
     if command -v go &> /dev/null; then
         go version
