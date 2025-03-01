@@ -224,17 +224,3 @@ kernel_clean:
 	esac
 
 ############################################################################
-# 工具链下载路径定义（关键部分）
-TOOLCHAIN_DIR = $(ROOTDIR)/toolchain
-GO_TOOLCHAIN_DIR = $(TOOLCHAIN_DIR)/go
-
-# Go 工具链的下载链接（需重点关注）
-GO_SOURCE = go1.23.0.linux-amd64.tar.gz
-GO_URL = https://dl.google.com/go/$(GO_SOURCE)
-
-# Go 工具链的安装逻辑
-$(GO_TOOLCHAIN_DIR)/.installed:
-    @mkdir -p $(GO_TOOLCHAIN_DIR)
-    @wget -q -O $(GO_TOOLCHAIN_DIR)/$(GO_SOURCE) $(GO_URL)
-    @tar -xzf $(GO_TOOLCHAIN_DIR)/$(GO_SOURCE) -C $(GO_TOOLCHAIN_DIR) --strip-components=1
-    @touch $@
