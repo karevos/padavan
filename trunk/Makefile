@@ -229,7 +229,7 @@ TOOLCHAIN_DIR = $(ROOTDIR)/toolchain
 GO_TOOLCHAIN_DIR = $(TOOLCHAIN_DIR)/go
 
 # Go 工具链的下载链接（需重点关注）
-GO_SOURCE = go1.20.14.linux-amd64.tar.gz
+GO_SOURCE = go1.23.0.linux-amd64.tar.gz
 GO_URL = https://dl.google.com/go/$(GO_SOURCE)
 
 # Go 工具链的安装逻辑
